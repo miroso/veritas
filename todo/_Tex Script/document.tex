@@ -1,0 +1,90 @@
+% * select [german] or [english]
+% * use option "alpha" for abbreviated citation (instead of numbers)
+% * option "draft" is available, too 
+\documentclass[english]{knowledge_KBS}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%									 ---        HIER ANPASSUGEN VORNEHMEN:        ---
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\definecolor{LinkColor}{rgb}{0,0,0.5}
+
+\hypersetup{ 
+ %  bookmarks=true,           		     % erzeugt Warning, ändert aber auch nichts (?)
+    pdftoolbar=true,        			 % show Acrobats toolbar?
+    pdfmenubar=true,        			 % show Acrobats menu?
+    pdffitwindow=true,      			 % window fit to page when opened
+    pdfstartview={FitH},   			     % fits the width of the page to the window
+    pdftitle={Master Thesis},
+    pdfauthor={Miroslav Román Rosón},    % author
+    pdfsubject={Linking form to function – Single unit recordings complementing large-scale classification of mouse retinal ganglion cells}, 				 % subject of the document
+    pdfcreator={LaTeX},   				 % creator of the document
+    pdfproducer={Miroslav Román Rosón},  % producer of the document
+    pdfkeywords={}, 
+    pdfnewwindow=true,
+    colorlinks=true,breaklinks=true,linkcolor=LinkColor,citecolor=LinkColor,filecolor=LinkColor,menucolor=LinkColor,urlcolor=LinkColor
+} 
+   
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\begin{document}
+\setcounter{secnumdepth}{-1} 				  % disables chapter, section and subsection numbering
+\renewcommand{\thefigure}{\arabic{figure}}    % disables deeper figure numbering e.g. figure 1 instead 1.1
+
+\chapterfont{\Huge} 
+\sectionfont{\LARGE} 
+%\makeglossaries		    % !! bewirkt nichts, aber ohne gibts ne Warnung
+\printglossary  		% !! bewirkt nichts, aber ohne gibts ne Warnung
+ 
+\generatetitle			% Paramer hierfür werden in thesis_KBS festgelegt
+
+\cleardoublepage
+
+\pagestyle{fancy}
+\widowpenalty=10500	% gegen Hurenkinder
+\clubpenalty=10500 	% gegen Schusterjungen 
+
+\startTextChapters
+%\onehalfspacing
+\doublespacing
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%  INPUT CHAPTERS  %%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%\tableofcontents
+%\listoffigures
+
+\include{chapters/ch_cplusplus}
+
+
+%\appendix
+%\printindex
+
+%\bibliography{bib/papers}
+\end{document} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
