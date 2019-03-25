@@ -1,0 +1,99 @@
+% * select [german] or [english]
+% * use option "alpha" for abbreviated citation (instead of numbers)
+% * option "draft" is available, too
+\documentclass[english]{veritas_KBS}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% HIER ANPASSUGEN VORNEHMEN
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\definecolor{LinkColor}{rgb}{0,0,0.5}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\setlength{\marginparwidth}{2cm}   % is required by todonotes packages, otherwise warning
+
+\hypersetup{
+    pdftoolbar=true,        			 % show Acrobats toolbar?
+    pdfmenubar=true,        			 % show Acrobats menu?
+    pdffitwindow=true,      			 % window fit to page when opened
+    pdfstartview={FitH},   			     % fits the width of the page to the window
+    pdftitle={title},
+    pdfauthor={Miroslav Román Rosón},    % author
+    pdfsubject={subject}, 				 % subject of the document
+    pdfcreator={LaTeX},   				 % creator of the document
+    pdfproducer={Miroslav Román Rosón},  % producer of the document
+    pdfkeywords={},
+    pdfnewwindow=true,
+    colorlinks=true,breaklinks=true,linkcolor=LinkColor,citecolor=LinkColor,filecolor=LinkColor,menucolor=LinkColor,urlcolor=LinkColor
+}
+
+\lstset{
+    frame=tb,
+    language=C++,
+    aboveskip=3mm,
+    belowskip=3mm,
+    showstringspaces=false,
+    columns=flexible,
+    basicstyle={\small\ttfamily},
+    numbers=none,
+    numberstyle=\tiny\color{gray},
+    keywordstyle=\color{blue},
+    commentstyle=\color{dkgreen},
+    stringstyle=\color{mauve},
+    breaklines=true,
+    breakatwhitespace=true,
+    tabsize=3
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+\setcounter{secnumdepth}{3} 				  % numbering can be disabled with -1
+\renewcommand{\thefigure}{\arabic{figure}}    % disables deeper figure numbering e.g. figure 1 instead 1.1
+
+\chapterfont{\Huge}
+\sectionfont{\LARGE}
+
+\printglossary  		% !! bewirkt nichts, aber ohne gibts ne Warnung
+\generatetitle			% Paramer hierfür werden in thesis_KBS festgelegt
+
+\cleardoublepage
+
+\pagestyle{fancy}
+\widowpenalty=10500	    % gegen Hurenkinder
+\clubpenalty=10500 	    % gegen Schusterjungen
+
+%\onehalfspacing
+\doublespacing
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% INPUT CHAPTERS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%\tableofcontents
+%\listoffigures
+
+\include{chapters/big_data}
+\include{chapters/computer_vision}
+\include{chapters/cplusplus}
+\include{chapters/deep_learning}
+\include{chapters/machine_learning}
+\include{chapters/match}
+\include{chapters/natural_phenomena}
+\include{chapters/terminal}
+
+%\appendix
+%\printindex
+
+%\bibliography{bib/papers}
+\end{document}
+
+% todo:
+% remove Theoretical and Practical parts
+% allowed only subsections
+% do something with the numbers and chapters

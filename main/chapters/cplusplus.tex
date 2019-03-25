@@ -1,0 +1,102 @@
+\chapter{C++}
+
+%% Topics:
+%
+% Inheritance
+% Key-Words
+% General Concepts
+% Testing
+
+\section{Theoretical Part}
+
+\subsection{Inheritance}
+\subsubsection{Write down an example inheritance class}
+\begin{lstlisting}
+    class C:  public D {
+    };
+
+    class B:  public D {
+    };
+
+    class A: public B, public C {
+    };
+\end{lstlisting}
+
+\subsection{Key-Words}
+\subsection{General Concepts}
+\subsection{Testing}
+
+
+
+
+
+\section{Practical Part}
+
+
+%
+%
+% \subsection{What does the "static" keyword mean?}
+% Static elements are independent of class instances and exist during during the entire application run-time. That said, they behave like global variables, but are visible (if set private) only in the scope of their class
+%
+%
+%
+% How do you declare virtual inheritance? Write down a code example.
+% class C:  virtual public D {
+% };
+%
+%
+% \subsubsection{What is Doxygen?}
+% Doxygen is the de facto standard tool for generating documentation (API) from annotated C++ sources, but it also supports other popular programming languages such as Java, Python and others.
+%
+% Link: http://www.doxygen.nl/manual/docblocks.html#specialblock
+%
+%
+%
+%
+%
+% \subsubsection{How do you write a gTest?}
+% TEST(TestSuiteName, TestName) {
+%   ... test body ...
+% }
+%
+% For example, let's take a simple integer function:
+%
+% int Factorial(int n);  // Returns the factorial of n
+% A test case for this function might look like:
+%
+% // Tests factorial of 0.
+% TEST(FactorialTest, HandlesZeroInput) {
+%   EXPECT_EQ(Factorial(0), 1);
+% }
+%
+% // Tests factorial of positive numbers.
+% TEST(FactorialTest, HandlesPositiveInput) {
+%   EXPECT_EQ(Factorial(1), 1);
+%   EXPECT_EQ(Factorial(2), 2);
+%   EXPECT_EQ(Factorial(3), 6);
+%   EXPECT_EQ(Factorial(8), 40320);
+% }
+%
+%
+%
+%
+% \subsubsection{What is a static variable definition?}
+% A static variable is kept in the same memory location for the execution of the program. So the value is live for life of the execution.
+%
+%
+% \subsubsection{What is a static member variable?}
+% A static member variable means that the variable is shared between all instances of the class.
+% That means, instead of each instance having a copy of the variable, all instances share this variable. It is often preferred to save space especially when the variable is an object of a class. Likewise for static functions and classes. There is only one copy of the variable. The idea is that creating and cleaning up the instances can be a computationally expensive process, if it can be made static, it is a good idea to speed up execution of the program.
+% On the flip side, it can also be expensive to use a static variable. If using a static variable requires the CPU to fetch the variable from slower memory, rather than having it in the cache or stack. Each fetch from slower memory slows down execution time.
+%
+% \subsubsection{What is the difference between sign und unsigned numbers?}
+% The "signed" indicator means that the item can hold positive or negative values. "Unsigned" doesn't distinguish between positive and negative values. A signed/unsigned variable can refer to any numerical data type (such as binary, integer, float, etc). Each data type might be further defined as signed or unsigned.
+%
+% For example, an 8-bit signed binary could hold values from 0-127, both positive and negative (1 bit is used for the sign and 7 bits for the value), while an 8-bit unsigned binary could hold values from 0-255 (nothing distinguishes whether or not the value should be considered positive or negative, though it is commonly assumed to be positive).
+%
+% A signed binary is a specific data type of a signed variable.
+%
+%
+% https://www.toptal.com/c-plus-plus/interview-questions#iquestion_form
+%
+% https://www.tutorialspoint.com/cplusplus/cpp_questions_answers.htm

@@ -1,0 +1,132 @@
+####################################################################################################
+BIG DATA
+####################################################################################################
+
+
+
+
+####################################################################################################
+COMPUTER VISION
+####################################################################################################
+How do you compute distances between objects in one image?
+What is triangulation and how can you apply it in computer vision?
+What is HOG and linear SVM better than other classical object detection approaches?
+What classical object detector and classifiers do you know?
+
+
+
+####################################################################################################
+C++
+####################################################################################################
+
+
+What are the 5 types of inheritance in C++?
+
+
+What are the three access class specifiers in C++?
+
+
+What do the letters in OOP signify?
+What is a class?
+What is an object?
+What is encapsulation?
+What is data abstraction?
+
+
+What is inheritance?
+
+What is an advantage of inline functions?
+What makes a class an abstract class?
+What is unsigned?
+What is a virtual function?
+What types of inheritances do we have?
+What is multiple inheritance?
+What is hierarchical inheritance?
+What is virtual inheritance and how why does it solve the diamond problem?
+What are compile time constructs? One example is sizeof, others?
+What is the arrow-type operator?
+What is the auto-operator?
+What is size_t type?
+How is dynamic memory being used?
+What is Qt?
+How does "struct" work in C++?
+How do exceptions in C++ work? Give an example.
+What is legacy code?
+Write down an example template class.
+What is  "#pragma" and how can it be used?
+What is the role of protected?
+What is a test fixture in google tests and how do you use it (check it in google primer)?
+What is the role of the keyword "delete"?
+What is a "dependency injection" in c++?
+What are memory leaks in c++?
+How does "virtual" work?
+
+
+####################################################################################################
+DEEP LEARNING
+####################################################################################################
+What kind of metrics do we have? How do plot these?
+What are the axis of a ROC curve? How do you explain a ROC curve?
+Why do you use momentum? How does it stop?
+How do you perform unit test for your neural network model?
+
+
+
+####################################################################################################
+INFORMATICS
+####################################################################################################
+How do you compute run-time complexity
+
+
+
+####################################################################################################
+MACHINE LEARNING
+####################################################################################################
+What is Fourier Transform and how does it work?
+What is PCA and how does it work?
+How is regression defined?
+What is a regressor?
+How do I recognize a regression problem?
+What is bootstrapping and how does it work?
+How are Markov models defined and how can they be applied, e.g. in NLP?
+
+
+####################################################################################################
+MATH
+####################################################################################################
+
+
+
+####################################################################################################
+NATURAL PHENOMENA
+####################################################################################################
+How is rainbow created?
+How is light in a light bulb created?
+How is electricity created?
+How is wind created?
+how does a telephone work?
+
+
+
+####################################################################################################
+PAPERS
+####################################################################################################
+HOG https://tel.archives-ouvertes.fr/tel-00390303/file/NavneetDalalThesis.pdf
+
+
+
+####################################################################################################
+PYTHON
+####################################################################################################
+How would you write unit test for neural networks?
+Check the following pages in order to see how it is done and implement it your own system
+
+The medium page:
+https://medium.com/@keeper6928/how-to-unit-test-machine-learning-code-57cf6fd81765
+The github repo:
+https://github.com/Thenerdstation/mltest
+
+
+####################################################################################################
+TERMINAL
+####################################################################################################
