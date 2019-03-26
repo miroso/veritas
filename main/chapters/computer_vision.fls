@@ -2,5 +2,5 @@ PWD C:/Users/mroson/workspace/projects/veritas/main/chapters
 INPUT c:/Users/mroson/AppData/Local/texlive/2018/texmf.cnf
 INPUT c:/Users/mroson/AppData/Local/texlive/2018/texmf-dist/web2c/texmf.cnf
 INPUT c:/Users/mroson/AppData/Local/texlive/2018/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT cplusplus.tex
-OUTPUT cplusplus.log
+INPUT computer_vision.tex
+OUTPUT computer_vision.log

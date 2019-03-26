@@ -48,33 +48,34 @@
 
 \ProcessOptions
 %\RequirePackage[german]{babel}
-\RequirePackage[english]{babel}
-\RequirePackage[T1]{fontenc}
-\RequirePackage[utf8x]{inputenc}
-\RequirePackage{lmodern}
 \RequirePackage{ae}
 \RequirePackage{amsmath}		% Zusätzliche Mathe-Symbole
-\RequirePackage{textcomp}		% µ not in italic = \textmu
-\RequirePackage{tabularx}
-\RequirePackage{listings}
-\RequirePackage{color}
-\RequirePackage{todonotes}
-\RequirePackage{glossaries}
-\RequirePackage[breaklinks]{hyperref}
-\RequirePackage[\setdraft]{graphicx}
-\RequirePackage{ifthen}
-\RequirePackage{fancyhdr}
-\RequirePackage{url}
-\RequirePackage{cite}
-\RequirePackage{setspace}
 \RequirePackage{array}
-\RequirePackage{longtable}
-\RequirePackage[printonlyused,withpage]{acronym}
-\RequirePackage{enumerate}
-\RequirePackage{subfigure}
-\RequirePackage{sectsty}
-\RequirePackage{makeidx}
 \RequirePackage[authoryear,round]{natbib}	% allows the user to easily switch between Harvard or numeric citation
+\RequirePackage[breaklinks]{hyperref}
+\RequirePackage{cite}
+\RequirePackage{color}
+\RequirePackage[english]{babel}
+\RequirePackage{enumerate}
+\RequirePackage{fancyhdr}
+\RequirePackage{glossaries}
+\RequirePackage{graphicx}
+\RequirePackage{ifthen}
+\RequirePackage{listings}
+\RequirePackage{lmodern}
+\RequirePackage{longtable}
+\RequirePackage{makeidx}
+\RequirePackage{mathtools}
+\RequirePackage[printonlyused,withpage]{acronym}
+\RequirePackage{sectsty}
+\RequirePackage{setspace}
+\RequirePackage{subfigure}
+\RequirePackage[T1]{fontenc}
+\RequirePackage{tabularx}
+\RequirePackage{textcomp}		% µ not in italic = \textmu
+\RequirePackage{todonotes}
+\RequirePackage{url}
+\RequirePackage[utf8x]{inputenc}
 %\RequirePackage{pslatex}
 %\RequirePackage[obeyDraft]{todonotes}
 %\RequirePackage{bbm} 		% hat irgendwas mit math-characters zu tun
@@ -221,7 +222,7 @@ Computer Vision
   {\end{list}}%
 
 
-% liste + "Doppelpunkt" (notwendig, damit Doppenpunkt au�erhalb des Stilparameters #1)
+% liste + "Doppelpunkt" (notwendig, damit Doppenpunkt außerhalb des Stilparameters #1)
 \newenvironment{listeDP}[2][\rm]{\begin{list}{}{\settowidth{\labelwidth}{{#1#2}:}
   \setlength{\leftmargin}{\labelwidth}\addtolength{\leftmargin}{\labelsep}
   \addtolength{\leftmargin}{3ex}%

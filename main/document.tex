@@ -11,7 +11,10 @@
 \definecolor{gray}{rgb}{0.5,0.5,0.5}
 \definecolor{mauve}{rgb}{0.58,0,0.82}
 
-\setlength{\marginparwidth}{2cm}   % is required by todonotes packages, otherwise warning
+\setlength{\marginparwidth}{2cm}         % is required by todonotes packages, otherwise warning
+\setcounter{secnumdepth}{2} 			 % numbering can be disabled with -1
+\setcounter{tocdepth}{2}
+\captionsetup[figure]{labelformat=empty} % Revoves "Figure" name from figure
 
 \hypersetup{
     pdftoolbar=true,        			 % show Acrobats toolbar?
@@ -28,6 +31,7 @@
     colorlinks=true,breaklinks=true,linkcolor=LinkColor,citecolor=LinkColor,filecolor=LinkColor,menucolor=LinkColor,urlcolor=LinkColor
 }
 
+% Code-style setting
 \lstset{
     frame=tb,
     language=C++,
@@ -51,7 +55,6 @@
 
 
 \begin{document}
-\setcounter{secnumdepth}{3} 				  % numbering can be disabled with -1
 \renewcommand{\thefigure}{\arabic{figure}}    % disables deeper figure numbering e.g. figure 1 instead 1.1
 
 \chapterfont{\Huge}
@@ -66,8 +69,8 @@
 \widowpenalty=10500	    % gegen Hurenkinder
 \clubpenalty=10500 	    % gegen Schusterjungen
 
-%\onehalfspacing
-\doublespacing
+\onehalfspacing
+%\doublespacing
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -78,7 +81,7 @@
 %\tableofcontents
 %\listoffigures
 
-\include{chapters/big_data}
+% \include{chapters/big_data}
 \include{chapters/computer_vision}
 \include{chapters/cplusplus}
 \include{chapters/deep_learning}
@@ -96,4 +99,4 @@
 % todo:
 % remove Theoretical and Practical parts
 % allowed only subsections
-% do something with the numbers and chapters
+% use the input command to make the document more uebersichtlicher
