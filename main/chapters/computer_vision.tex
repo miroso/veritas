@@ -6,7 +6,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Describe canny detection algorithm?}
+\subsection{Describe canny edge detection algorithm?}
 Here are the steps, which are needed to implement canny edge detection algorithm:
 \begin{enumerate}
     \item Grayscale conversion
@@ -53,7 +53,7 @@ An edge in an image may point in a variety of directions, so the Canny algorithm
     \begin{minipage}{.5\textwidth}
         \centering
         $G_{x} = S_{x} * A =
-        \left[ \begin{array}{rrrr}
+        \left[ \begin{array}{rrr}
         1 & 0 & -1 \\
         2 & 0 & -2 \\
         1 & 0 & -1 \\
@@ -62,7 +62,7 @@ An edge in an image may point in a variety of directions, so the Canny algorithm
     \begin{minipage}{.5\textwidth}
         \centering
         $G_{y} = S_{y} * A =
-        \left[ \begin{array}{rrrr}
+        \left[ \begin{array}{rrr}
         1 & 2 & 1 \\
         0 & 0 & 0 \\
         -1 & -2 & -1 \\
@@ -153,32 +153,117 @@ So far, the strong edge pixels should certainly be involved in the final edge im
     \caption{Final Result from Canny Edge Detection Algorithm}
 \end{figure}
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
+\subsection{What are the drawbacks of the original canny edge detector?}
+While traditional Canny edge detection provides relatively simple but precise methodology for edge detection problem, with more demanding requirements on the accuracy and robustness on the detection, the traditional algorithm can no longer handle the challenging edge detection task. The main defects of the traditional algorithm can be summarized as follows:
 
-% Drawbacks of canny edge detector
-% While traditional Canny edge detection provides relatively simple but precise methodology for edge detection problem, with more demanding requirements on the accuracy and robustness on the detection, the traditional algorithm can no longer handle the challenging edge detection task. The main defects of the traditional algorithm can be summarized as follows:
-%
-% 1. A Gaussian filter is applied to smooth out the noise, but it will also smooth the edge, which is considered as the high frequency feature. This will increase the possibility of missing weak edges, and the appearance of isolated edges in the result.
-%
-% As both edge and noise will be identified as high frequency signal, simple Gaussian filter will add smooth effect on both of them. However, in order to reach high accuracy of detection of the real edge, it is expected that more smooth effect should be added to noise and less smooth effect should be added to the edge. Bing Wang and Shaosheng Fan from Changsha University of Science and Technology developed an adaptive filter, where the filter will evaluate discontinuity between greyscale values of each pixel.[8] The higher the discontinuity, the lower the weight value is set for the smooth filter at that point. Contrarily, the lower the discontinuity between the greyscale values, the higher the weight value is set to the filter.
-%
-% 2. For the gradient amplitude calculation, the old Canny edge detection algorithm uses the Centre in a small 2×2 neighbourhood window to calculate the finite difference mean value to represent the gradient amplitude. This method is sensitive to noise and can easily detect false edges and lose real edges.
-%
-% The gradient magnitude and direction can be calculated with a variety of different edge detection operators, and the choice of operator can influence the quality of results. A very commonly chosen one is the 3x3 Sobel filter. However, other filters may be better by, such as a 5x5 Sobel filter which will reduce noise or the Scharr filter which has better rotational symmetry. Other common choices are Prewitt (used by Zhou [10]) and Roberts Cross.
-%
-% 3. In the traditional Canny edge detection algorithm, there will be two fixed global threshold values to filter out the false edges. However, as the image gets complex, different local areas will need very different threshold values to accurately find the real edges. In addition, the global threshold values are determined manually through experiments in the traditional method, which leads to complexity of calculation when a large number of different images need to be dealt with.
-%
-% In order to resolve the challenges where it is hard to determine the dual-threshold value empirically, Otsu's method [11] can be used on the non-maximum suppressed gradient magnitude image to generate the high threshold. The low threshold is typically set to 1/2 of the high threshold in this case. Since the gradient magnitude image is continuous-valued without a well-defined maximum, Otsu's method has to be adapted to use value/count pairs instead of a complete histogram.
-%
-% 4.The result of the traditional detection cannot reach a satisfactory high accuracy of single response for each edge - multi-point responses will appear.
-%
-% While the traditional canny edge detection have implemented a good detection result to meet with the first two criteria, it does not meet with the single response per edge strictly. A mathematical morphology to thin the detected edge is developed by Mallat S and Zhong.[9]
+\begin{itemize}
+    \item Use an adaptive filter to apply different smoothing for noise and edge
+    \item Select an optimal operator
+    \item Use dynamic threshold values
+    \item Use a better method for morphological detection
+\end{enumerate}
+
+\begin{enumerate}
+    \item A Gaussian filter is applied to smooth out the noise, but it will also smooth the edge, which is considered as the high frequency feature. This will increase the possibility of missing weak edges, and the appearance of isolated edges in the result.
+
+    As both edge and noise will be identified as high frequency signal, simple Gaussian filter will add smooth effect on both of them. However, in order to reach high accuracy of detection of the real edge, it is expected that more smooth effect should be added to noise and less smooth effect should be added to the edge. \cite{wang09} from Changsha University of Science and Technology developed an adaptive filter, where the filter will evaluate discontinuity between greyscale values of each pixel. The higher the discontinuity, the lower the weight value is set for the smooth filter at that point. Contrarily, the lower the discontinuity between the greyscale values, the higher the weight value is set to the filter.
+
+    \item For the gradient amplitude calculation, the old Canny edge detection algorithm uses the Centre in a small 2×2 neighbourhood window to calculate the finite difference mean value to represent the gradient amplitude. This method is sensitive to noise and can easily detect false edges and lose real edges.
+
+    The gradient magnitude and direction can be calculated with a variety of different edge detection operators, and the choice of operator can influence the quality of results. A very commonly chosen one is the 3x3 Sobel filter. However, other filters may be better by, such as a 5x5 Sobel filter which will reduce noise or the Scharr filter which has better rotational symmetry. Other common choices are Prewitt (used by \cite{zhou11}) and Roberts Cross.
+
+    \item In the traditional Canny edge detection algorithm, there will be two fixed global threshold values to filter out the false edges. However, as the image gets complex, different local areas will need very different threshold values to accurately find the real edges. In addition, the global threshold values are determined manually through experiments in the traditional method, which leads to complexity of calculation when a large number of different images need to be dealt with.
+
+    In order to resolve the challenges where it is hard to determine the dual-threshold value empirically, Otsu's method (\cite{otsu78}) can be used on the non-maximum suppressed gradient magnitude image to generate the high threshold. The low threshold is typically set to 1/2 of the high threshold in this case. Since the gradient magnitude image is continuous-valued without a well-defined maximum, Otsu's method has to be adapted to use value/count pairs instead of a complete histogram.
+
+    \item The result of the traditional detection cannot reach a satisfactory high accuracy of single response for each edge - multi-point responses will appear.
+
+    While the traditional canny edge detection have implemented a good detection result to meet with the first two criteria, it does not meet with the single response per edge strictly. A mathematical morphology to thin the detected edge is developed by \cite{zhong92}.
+\end{enumerate}
 
 
-% >> add links for the papers
-% https://en.wikipedia.org/wiki/Canny_edge_detector
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\subsection{What filter operators do you know?}
+As a rule if you define your custom operator, the sum of all numbers should yield 0.
+\subsubsection{Sobel operator}
+
+\begin{figure}[!htb]
+    \centering
+    \begin{minipage}{.5\textwidth}
+        \centering
+        $G_{x} = S_{x} * A =
+        \left[ \begin{array}{rrr}
+        1 & 0 & -1 \\
+        2 & 0 & -2 \\
+        1 & 0 & -1 \\
+        \end{array}\right] $
+    \end{minipage}%
+    \begin{minipage}{.5\textwidth}
+        \centering
+        $G_{y} = S_{y} * A =
+        \left[ \begin{array}{rrr}
+        1 & 2 & 1 \\
+        0 & 0 & 0 \\
+        -1 & -2 & -1 \\
+        \end{array}\right] $
+    \end{minipage}
+\end{figure}
+
+
+\subsubsection{Roberts cross}
+
+\begin{figure}[!htb]
+    \centering
+    \begin{minipage}{.5\textwidth}
+        \centering
+        $\left[ \begin{array}{rr}
+        1 & 0 \\
+        0 & -1 \\
+        \end{array}\right] $
+    \end{minipage}%
+    \begin{minipage}{.5\textwidth}
+        \centering
+        $\left[ \begin{array}{rr}
+        0 & 1 \\
+        -1 & 0 \\
+        \end{array}\right] $
+    \end{minipage}
+\end{figure}
+
+\subsubsection{Prewitt operator}
+
+\begin{figure}[!htb]
+    \centering
+    \begin{minipage}{.5\textwidth}
+        \centering
+        $G_{x} = S_{x} * A =
+        \left[ \begin{array}{rrr}
+        1 & 0 & -1 \\
+        1 & 0 & -1 \\
+        1 & 0 & -1 \\
+        \end{array}\right] $
+    \end{minipage}%
+    \begin{minipage}{.5\textwidth}
+        \centering
+        $G_{y} = S_{y} * A =
+        \left[ \begin{array}{rrr}
+        1 & 1 & 1 \\
+        0 & 0 & 0 \\
+        -1 & -1 & -1 \\
+        \end{array}\right] $
+    \end{minipage}
+\end{figure}
+
+\subsubsection{Laplace operator}
+
+% get here the laplace operator
+
 
 
 

@@ -1,8 +1,8 @@
 ####################################################################################################
 BIG DATA
 ####################################################################################################
-
-
+What is forecasting?
+What is data exploration?
 
 
 ####################################################################################################
@@ -12,7 +12,7 @@ How do you compute distances between objects in one image?
 What is triangulation and how can you apply it in computer vision?
 What is HOG and linear SVM better than other classical object detection approaches?
 What classical object detector and classifiers do you know?
-
+Why the sum of all the elements in Edge detection kernel is zero?
 
 
 ####################################################################################################
