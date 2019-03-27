@@ -19,22 +19,15 @@ What classical object detector and classifiers do you know?
 C++
 ####################################################################################################
 
-
 What are the 5 types of inheritance in C++?
-
-
+How is c++ code generated? What is a generator? what is a linker?
 What are the three access class specifiers in C++?
-
-
 What do the letters in OOP signify?
 What is a class?
 What is an object?
 What is encapsulation?
 What is data abstraction?
-
-
 What is inheritance?
-
 What is an advantage of inline functions?
 What makes a class an abstract class?
 What is unsigned?
@@ -69,13 +62,13 @@ What kind of metrics do we have? How do plot these?
 What are the axis of a ROC curve? How do you explain a ROC curve?
 Why do you use momentum? How does it stop?
 How do you perform unit test for your neural network model?
-
+Explain forward learning algorithm and backpropagation.
 
 
 ####################################################################################################
 INFORMATICS
 ####################################################################################################
-How do you compute run-time complexity
+How do you compute run-time complexity. Explain with examples:
 
 
 
