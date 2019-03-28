@@ -2,7 +2,12 @@
 BIG DATA
 ####################################################################################################
 What is forecasting?
-What is data exploration?
+Can you explain what does data exploration mean?
+What is monitoring and how it is used?
+How do recommendation system work?
+What is user profiling?
+What do you understand under Influence Analytics?
+What are the steps for implementation a Portfolio Optimization?
 
 
 ####################################################################################################
@@ -144,3 +149,9 @@ Udacity reinforcement learning projects
 Udacity deep learning projects
 Udacity and Andrew NG NLP projects
 GANS
+
+
+####################################################################################################
+DATASETS
+####################################################################################################
+// add here what datasets can you find where
