@@ -70,9 +70,9 @@ How do you perform unit test for your neural network model?
 Explain forward learning algorithm and backpropagation.
 What is a DeepDream project?
 How would you describe reinforcement learning? What is special about the NN architecture?
-How does convolution in CNNs work?
+How does convolution in CNNs work? How is defined mathematically?
 What is valid and same convolution?
-
+CNN: How are the layers organized? How do you get the features/layer? Number of filters?
 
 ####################################################################################################
 INFORMATICS
@@ -155,3 +155,8 @@ GANS
 DATASETS
 ####################################################################################################
 // add here what datasets can you find where
+
+
+
+spark
+what are databricks
