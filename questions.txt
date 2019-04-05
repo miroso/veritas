@@ -8,6 +8,7 @@ How do recommendation system work?
 What is user profiling?
 What do you understand under Influence Analytics?
 What are the steps for implementation a Portfolio Optimization?
+What is MapReduce concept (from spark)?
 
 
 ####################################################################################################
@@ -16,6 +17,7 @@ COMPUTER VISION
 How do you compute distances between objects in one image?
 What is triangulation and how can you apply it in computer vision?
 What is HOG and linear SVM better than other classical object detection approaches?
+How does HOG work exactly?
 What classical object detector and classifiers do you know?
 Why the sum of all the elements in Edge detection kernel is zero?
 
@@ -73,6 +75,8 @@ How would you describe reinforcement learning? What is special about the NN arch
 How does convolution in CNNs work? How is defined mathematically?
 What is valid and same convolution?
 CNN: How are the layers organized? How do you get the features/layer? Number of filters?
+What is the role of the bias? Does is have something in common with bias towards a certain class?
+
 
 ####################################################################################################
 INFORMATICS
@@ -131,6 +135,7 @@ https://medium.com/@keeper6928/how-to-unit-test-machine-learning-code-57cf6fd817
 The github repo:
 https://github.com/Thenerdstation/mltest
 
+Hwo do you deploy a python egg?
 
 ####################################################################################################
 TERMINAL
@@ -151,10 +156,21 @@ Udacity and Andrew NG NLP projects
 GANS
 
 
+_____________________
+Vehicle Detection
+> visualize separate filters
+> compare different methods
+> why is the hog better than the other classical algorithms?
+
+_____________________
+Vehicle Detection
+> car detection + classifier to detect if it is a car or a truck or something bigger. This info would be useful for subsequent triangulation, i.e. we need the size estimate of the car
+> create a website to the projects at one point?
+
 ####################################################################################################
-DATASETS
+test suite
 ####################################################################################################
-// add here what datasets can you find where
+// check dataset that there are equal number of
 
 
 
