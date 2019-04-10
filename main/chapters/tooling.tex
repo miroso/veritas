@@ -46,29 +46,30 @@ vim vendor/git-for-windows/etc/profile.d/git-prompt.sh
 
 pylint is used for static code analysis.
 
-To create a shortcut for the code analysis in pycharm:
+% To create a shortcut for the code analysis in pycharm:
+%
+% \begin{enumerate}
+%     \item File → Settings
+%     \item Tools → External Tools
+%     \item Click the "+" Sign to add a new Tool
+%     \item Enter the following:
+%     \begin{itemize}
+%         \item Name: pylint
+%         \item Description: pylint code inspection
+%         \item Program: $PyInterpreterDirectory$\pylint.exe
+%         \item Arguments: -v --rcfile=.pylintrc "--msg-template='{abspath}:{line:5d},{column:2d}: {msg} ({symbol})'" --output-format=colorized "$FilePath$"
+%         \item Working directory: $ProjectFileDir$
+%         \item Advanced Options
+%         \begin{itemize}
+%             \item Syncronize files after execution: True
+%             \item Open Console for tool Output: True
+%             \item Output filters: $FILE_PATH$:\s*$LINE$\,\s*$COLUMN$:
+%         \end{itemize}
+%     \end{itemize}
+% \end{enumerate}
+%
+% \includegraphics[width=40mm]{pycharm_pylint_setup.png}
 
-\begin{enumerate}
-    \item File → Settings
-    \item Tools → External Tools
-    \item Click the "+" Sign to add a new Tool
-    \item Enter the following:
-    \begin{itemize}
-        \item Name: pylint
-        \item Description: pylint code inspection
-        \item Program: $PyInterpreterDirectory$\pylint.exe
-        \item Arguments: -v --rcfile=.pylintrc "--msg-template='{abspath}:{line:5d},{column:2d}: {msg} ({symbol})'" --output-format=colorized "$FilePath$"
-        \item Working directory: $ProjectFileDir$
-        \item Advanced Options
-        \begin{itemize}
-            \item Syncronize files after execution: True
-            \item Open Console for tool Output: True
-            \item Output filters: $FILE_PATH$:\s*$LINE$\,\s*$COLUMN$:
-        \end{itemize}
-    \end{itemize}
-\end{enumerate}
-
-\includegraphics[width=40mm]{ pycharm_pylint_setup.png}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -80,25 +81,25 @@ bandit is used to check for common security vulnerabilities
 
 To create a shortcut for the code analysis in pycharm:
 
-\begin{enumerate}
-    \item File → Settings
-    \item Tools → External Tools
-    \item Click the "+" Sign to add a new Tool
-    \item Enter the following:
-    \begin{itemize}
-        \item Name: bandit
-        \item Description: Linter for security vulnerabilities
-        \item Program: $PyInterpreterDirectory$\bandit
-        \item Arguments: -r "$FilePath$"
-        \item Working directory: $ProjectFileDir$
-        \item Advanced Options
-        \begin{itemize}
-            \item Syncronize files after execution: True
-            \item Open Console for tool Output: True
-            \item Output filters: \s*Location:\s*$FILE_PATH$:\s*$LINE$
-        \end{itemize}
-    \end{itemize}
-\end{enumerate}
+% \begin{enumerate}
+%     \item File → Settings
+%     \item Tools → External Tools
+%     \item Click the "+" Sign to add a new Tool
+%     \item Enter the following:
+%     \begin{itemize}
+%         \item Name: bandit
+%         \item Description: Linter for security vulnerabilities
+%         \item Program: $PyInterpreterDirectory$\bandit
+%         \item Arguments: -r "$FilePath$"
+%         \item Working directory: $ProjectFileDir$
+%         \item Advanced Options
+%         \begin{itemize}
+%             \item Syncronize files after execution: True
+%             \item Open Console for tool Output: True
+%             \item Output filters: \s*Location:\s*$FILE_PATH$:\s*$LINE$
+%         \end{itemize}
+%     \end{itemize}
+% \end{enumerate}
 
 
 
@@ -108,25 +109,38 @@ yapf is used for automatic code formatting.
 
 To create a shortcut for the code analysis in pycharm:
 
-\begin{enumerate}
-    \item File → Settings
-    \item Tools → External Tools
-    \item Click the "+" Sign to add a new Tool
-    \item Enter the following:
-    \begin{itemize}
-        \item Name: yapf in-place
-        \item Description: Reformat Code in-place
-        \item Program: $PyInterpreterDirectory$\yapf.exe
-        \item Arguments: --style=yapf.conf -i "$FilePath$"
-        \item Working directory: $ProjectFileDir$
-        \item Advanced Options
-        \begin{itemize}
-            \item Syncronize files after execution: True
-            \item Open Console for tool Output: True
-        \end{itemize}
-    \end{itemize}
-\end{enumerate}
+% \begin{enumerate}
+%     \item File → Settings
+%     \item Tools → External Tools
+%     \item Click the "+" Sign to add a new Tool
+%     \item Enter the following:
+%     \begin{itemize}
+%         \item Name: yapf in-place
+%         \item Description: Reformat Code in-place
+%         \item Program: $PyInterpreterDirectory$\yapf.exe
+%         \item Arguments: --style=yapf.conf -i "$FilePath$"
+%         \item Working directory: $ProjectFileDir$
+%         \item Advanced Options
+%         \begin{itemize}
+%             \item Syncronize files after execution: True
+%             \item Open Console for tool Output: True
+%         \end{itemize}
+%     \end{itemize}
+% \end{enumerate}
 
 
 
 If you don't want to replace the code in-place remove the -i argument and add another config for that (Lächeln)
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{PostgreSQL Syntag}
+
+\textbf{Get all table names:}
+SELECT table_name
+FROM information_schema.tables
+WHERE table_schema='public' AND table_type='BASE TABLE'
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
