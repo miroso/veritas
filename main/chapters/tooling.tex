@@ -99,3 +99,34 @@ To create a shortcut for the code analysis in pycharm:
         \end{itemize}
     \end{itemize}
 \end{enumerate}
+
+
+
+\begin{yapf setup}
+Automatic Code Formatting: yapf
+yapf is used for automatic code formatting.
+
+To create a shortcut for the code analysis in pycharm:
+
+\begin{enumerate}
+    \item File → Settings
+    \item Tools → External Tools
+    \item Click the "+" Sign to add a new Tool
+    \item Enter the following:
+    \begin{itemize}
+        \item Name: yapf in-place
+        \item Description: Reformat Code in-place
+        \item Program: $PyInterpreterDirectory$\yapf.exe
+        \item Arguments: --style=yapf.conf -i "$FilePath$"
+        \item Working directory: $ProjectFileDir$
+        \item Advanced Options
+        \begin{itemize}
+            \item Syncronize files after execution: True
+            \item Open Console for tool Output: True
+        \end{itemize}
+    \end{itemize}
+\end{enumerate}
+
+
+
+If you don't want to replace the code in-place remove the -i argument and add another config for that (Lächeln)
