@@ -53,7 +53,8 @@
 \RequirePackage{array}
 \RequirePackage[authoryear,round]{natbib}	% allows the user to easily switch between Harvard or numeric citation
 \RequirePackage[breaklinks]{hyperref}
-\RequirePackage{cite}
+\RequirePackage{natbib}
+%\RequirePackage{cite}
 \RequirePackage{color}
 \RequirePackage[english]{babel}
 \RequirePackage{enumerate}
