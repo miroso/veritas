@@ -7,8 +7,11 @@
 \subsection{How do you change lambda promt?}
 On windows, if you are using anaconda, there might be a problem with activating virtualenv, since conda does't not recognize the lambda character. Thus you have to change the lambda character in the cmder as follows:
 
-In cmder folder:
+\vspace{4mm}
+
+\begin{lstlisting}
 vim vendor/git-for-windows/etc/profile.d/git-prompt.sh
+\end{lstlisting}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -46,29 +49,29 @@ vim vendor/git-for-windows/etc/profile.d/git-prompt.sh
 
 pylint is used for static code analysis.
 
-% To create a shortcut for the code analysis in pycharm:
-%
-% \begin{enumerate}
-%     \item File → Settings
-%     \item Tools → External Tools
-%     \item Click the "+" Sign to add a new Tool
-%     \item Enter the following:
-%     \begin{itemize}
-%         \item Name: pylint
-%         \item Description: pylint code inspection
-%         \item Program: $PyInterpreterDirectory$\pylint.exe
-%         \item Arguments: -v --rcfile=.pylintrc "--msg-template='{abspath}:{line:5d},{column:2d}: {msg} ({symbol})'" --output-format=colorized "$FilePath$"
-%         \item Working directory: $ProjectFileDir$
-%         \item Advanced Options
-%         \begin{itemize}
-%             \item Syncronize files after execution: True
-%             \item Open Console for tool Output: True
-%             \item Output filters: $FILE_PATH$:\s*$LINE$\,\s*$COLUMN$:
-%         \end{itemize}
-%     \end{itemize}
-% \end{enumerate}
-%
-% \includegraphics[width=40mm]{pycharm_pylint_setup.png}
+To create a shortcut for the code analysis in pycharm:
+
+\begin{enumerate}
+    \item File → Settings
+    \item Tools → External Tools
+    \item Click the "+" Sign to add a new Tool
+    \item Enter the following:
+    \begin{itemize}
+        \item Name: pylint
+        \item Description: pylint code inspection
+        \item Program: \$PyInterpreterDirectory\$\textbackslash pylint.exe
+        \item Arguments: -v --rcfile=.pylintrc "--msg-template='{abspath}:{line:5d},{column:2d}: {msg} ({symbol})'" --output-format=colorized "\$FilePath\$"
+        \item Working directory: \$ProjectFileDir\$
+        \item Advanced Options
+        \begin{itemize}
+            \item Synchronize files after execution: True
+            \item Open Console for tool Output: True
+            \item Output filters: \$FILE_PATH\$:\textbackslash %s*\$LINE\$\textbackslash,\textbackslash s*\$COLUMN\$:
+        \end{itemize}
+    \end{itemize}
+\end{enumerate}
+
+\includegraphics[width=120mm]{pycharm_pylint_setup.png}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -135,14 +138,8 @@ If you don't want to replace the code in-place remove the -i argument and add an
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{PostgreSQL Syntax}
+\section{PostgreSQL}
 
-\textbf{Get all table names:}
-
-$
-SELECT table_name
-FROM information_schema.tables
-WHERE table_schema='public' AND table_type='BASE TABLE'
-$
+% get it here from the file
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

@@ -1,0 +1,27 @@
+\BOOKMARK [0][-]{chapter.1}{Big Data}{}% 1
+\BOOKMARK [0][-]{chapter.2}{Computer Vision}{}% 2
+\BOOKMARK [1][-]{section.2.1}{Edge Detection}{chapter.2}% 3
+\BOOKMARK [2][-]{subsection.2.1.1}{Describe canny edge detection algorithm?}{section.2.1}% 4
+\BOOKMARK [2][-]{subsection.2.1.2}{What are the drawbacks of the original canny edge detector?}{section.2.1}% 5
+\BOOKMARK [2][-]{subsection.2.1.3}{What filter operators do you know?}{section.2.1}% 6
+\BOOKMARK [2][-]{subsection.2.1.4}{What is blob Connected-component labeling?}{section.2.1}% 7
+\BOOKMARK [0][-]{chapter.3}{C++}{}% 8
+\BOOKMARK [1][-]{section.3.1}{Theoretical Part}{chapter.3}% 9
+\BOOKMARK [2][-]{subsection.3.1.1}{Inheritance}{section.3.1}% 10
+\BOOKMARK [2][-]{subsection.3.1.2}{Key-Words}{section.3.1}% 11
+\BOOKMARK [2][-]{subsection.3.1.3}{General Concepts}{section.3.1}% 12
+\BOOKMARK [2][-]{subsection.3.1.4}{Testing}{section.3.1}% 13
+\BOOKMARK [1][-]{section.3.2}{Practical Part}{chapter.3}% 14
+\BOOKMARK [0][-]{chapter.4}{Deep Learning}{}% 15
+\BOOKMARK [0][-]{chapter.5}{Machine Learning}{}% 16
+\BOOKMARK [0][-]{chapter.6}{Natural Phenomena}{}% 17
+\BOOKMARK [0][-]{chapter.7}{Tooling}{}% 18
+\BOOKMARK [1][-]{section.7.1}{Cmder}{chapter.7}% 19
+\BOOKMARK [2][-]{subsection.7.1.1}{How do you change lambda promt?}{section.7.1}% 20
+\BOOKMARK [1][-]{section.7.2}{Anaconda}{chapter.7}% 21
+\BOOKMARK [2][-]{subsection.7.2.1}{How do you handle virtual environment in anaconda}{section.7.2}% 22
+\BOOKMARK [1][-]{section.7.3}{PyCharm}{chapter.7}% 23
+\BOOKMARK [2][-]{subsection.7.3.1}{Pylint setup}{section.7.3}% 24
+\BOOKMARK [2][-]{subsection.7.3.2}{bandit setup for security testing}{section.7.3}% 25
+\BOOKMARK [2][-]{subsection.7.3.3}{yapf setup}{section.7.3}% 26
+\BOOKMARK [1][-]{section.7.4}{PostgreSQL}{chapter.7}% 27
