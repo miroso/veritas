@@ -1,0 +1,86 @@
+\chapter{   Data Analytics}
+% CHAPTER SETTINGS
+\graphicspath{{./images/data_analytics/}
+
+\section{Time Series analysis}
+
+\subsection{Transforms for Time Series Data}
+
+for code
+https://machinelearningmastery.com/machine-learning-data-transforms-for-time-series-forecasting/
+
+Power Transform
+A power transform removes a shift from a data distribution to make the distribution more-normal (Gaussian).
+
+On a time series dataset, this can have the effect of removing a change in variance over time.
+
+####
+
+Difference Transform
+
+A difference transform is a simple way for removing a systematic structure from the time series.
+
+For example, a trend can be removed by subtracting the previous value from each value in the series. This is called first order differencing. The process can be repeated (e.g. difference the differenced series) to remove second order trends, and so on.
+
+A seasonal structure can be removed in a similar way by subtracting the observation from the prior season, e.g. 12 time steps ago for monthly data with a yearly seasonal structure.
+
+####
+
+Standardization
+
+Standardization is a transform for data with a Gaussian distribution.
+
+It subtracts the mean and divides the result by the standard deviation of the data sample. This has the effect of transforming the data to have mean of zero, or centered, with a standard deviation of 1. This resulting distribution is called a standard Gaussian distribution, or a standard normal, hence the name of the transform.
+
+
+####
+
+Normalization
+
+ormalization is a rescaling of data from the original range to a new range between 0 and 1.
+
+As with standardization, this can be implemented using a transform object from the scikit-learn library, specifically the MinMaxScaler class. In addition to normalization, this class can be used to rescale data to any range you wish by specifying the preferred range in the constructor of the object.
+
+
+
+\subsection{Considerations for Model Evaluation}
+
+Considerations for Model Evaluation
+
+We have mentioned the importance of being able to invert a transform on the predictions of a model in order to calculate a model performance statistic that is directly comparable to other methods.
+
+Additionally, another concern is the problem of data leakage.
+
+Three of the above data transforms estimate coefficients from a provided dataset that are then used to transform the data. Specifically:
+
+Power Transform: lambda parameter.
+Standardization: mean and standard deviation statistics.
+Normalization: min and max values.
+These coefficients must be estimated on the training dataset only.
+
+Once estimated, the transform can be applied using the coefficients to the training and the test dataset before evaluating your model.
+
+If the coefficients are estimated using the entire dataset prior to splitting into train and test sets, then there is a small leakage of information from the test set to the training dataset. This can result in estimates of model skill that are optimistically biased.
+
+As such, you may want to enhance the estimates of the coefficients with domain knowledge, such as expected min/max values for all time in the future.
+
+Generally, differencing does not suffer the same problems. In most cases, such as one-step forecasting, the lag observations are available to perform the difference calculation. If not, the lag predictions can be used wherever needed as a proxy for the true observations in difference calculations
+
+\subsection{Order of Data Transforms}
+
+a suggested ordering for data transforms is as follows:
+
+Power Transform.
+Seasonal Difference.
+Trend Difference.
+Standardization.
+Normalization.
+Obviously, you would only use the transforms required for your specific dataset.
+
+Importantly, when the transform operations are inverted, the order of the inverse transform operations must be reversed. Specifically, the inverse operations must be performed in the following order:
+
+Normalization.
+Standardization.
+Trend Difference.
+Seasonal Difference.
+Power Transform.
