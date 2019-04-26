@@ -82,7 +82,6 @@ What is the role of the bias? Does is have something in common with bias towards
 INFORMATICS
 ####################################################################################################
 How do you compute run-time complexity. Explain with examples.
-What is ISO 26262?
 
 
 ####################################################################################################
