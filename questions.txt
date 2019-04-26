@@ -17,6 +17,7 @@ COMPUTER VISION
 How do you compute distances between objects in one image?
 What is triangulation and how can you apply it in computer vision?
 What is HOG and linear SVM better than other classical object detection approaches?
+What is LBP (local binary patterns) feature extractor?
 How does HOG work exactly?
 What classical object detector and classifiers do you know?
 Why the sum of all the elements in Edge detection kernel is zero?
@@ -160,6 +161,7 @@ Vehicle Detection
 > visualize separate filters
 > compare different methods
 > why is the hog better than the other classical algorithms?
+> use the LBP feature extractor
 
 _____________________
 Vehicle Detection
