@@ -1,1 +1,9 @@
 \chapter{   Python}
+
+% CHAPTER SETTINGS
+\graphicspath{{./images/python/}}
+
+\section{Data types}
+
+\subsection{Why isinstance(bool, int) yields True?}
+For historic reasons, bool is a subclass of int, so True is an instance of int. (Originally, Python had no bool type, and things that returned truth values returned 1 or 0. When they added bool, True and False had to be drop-in replacements for 1 and 0 as much as possible for backward compatibility, hence the subclassing.)
