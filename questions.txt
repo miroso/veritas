@@ -98,6 +98,7 @@ How are Markov models defined and how can they be applied, e.g. in NLP?
 What is fuzzy logic and where can it be applied?
 What are evolutionary algorithms good for?
 How would you fit a function using sin/cos? How would the fit look like, when training with few/multiple training points?
+What types of cross validations do we have?
 
 
 ####################################################################################################
