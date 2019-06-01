@@ -77,6 +77,10 @@ How does convolution in CNNs work? How is defined mathematically?
 What is valid and same convolution?
 CNN: How are the layers organized? How do you get the features/layer? Number of filters?
 What is the role of the bias? Does is have something in common with bias towards a certain class?
+​Describe hinge loss computation (DL p92)
+Describe cross entropy loss computattion (DL p92)
+What are the 4 main steps of classificstion (DL p82-83)
+What is the bias trick (DL p99)
 
 
 ####################################################################################################
