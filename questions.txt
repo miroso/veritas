@@ -77,7 +77,7 @@ How does convolution in CNNs work? How is defined mathematically?
 What is valid and same convolution?
 CNN: How are the layers organized? How do you get the features/layer? Number of filters?
 What is the role of the bias? Does is have something in common with bias towards a certain class?
-
+How does sgd work - combine the code with from pyimagesearch with andrew NG. Why do you multiply the error with the derivate (d = error * sigmoid_deriv(preds))
 
 ####################################################################################################
 INFORMATICS
@@ -99,6 +99,8 @@ What is fuzzy logic and where can it be applied?
 What are evolutionary algorithms good for?
 How would you fit a function using sin/cos? How would the fit look like, when training with few/multiple training points?
 What types of cross validations do we have?
+What is the difference between bagging and boosting
+How does adaboost work - boosting in general?
 
 
 ####################################################################################################
