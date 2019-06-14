@@ -58,7 +58,10 @@
 \RequirePackage{color}
 \RequirePackage[english]{babel}
 \RequirePackage{enumerate}
-\RequirePackage{fancyhdr}
+
+\RequirePackage{scrlayer-scrpage}
+% \RequirePackage{fancyhdr}
+
 \RequirePackage{glossaries}
 \RequirePackage{graphicx}
 \RequirePackage{ifthen}
@@ -68,6 +71,7 @@
 \RequirePackage{makeidx}
 \RequirePackage{mathtools}
 \RequirePackage[printonlyused,withpage]{acronym}
+\RequirePackage{scrhack}
 \RequirePackage{sectsty}
 \RequirePackage{setspace}
 \RequirePackage{subfigure}
@@ -110,11 +114,12 @@
 \renewcommand{\textfraction}{.15}     % Default: .2
 \renewcommand{\arraystretch}{1.2}
 
-\headwidth160mm \lhead[\thepage]{\rightmark}
-\chead{} \rhead[\leftmark]{\thepage}
-\cfoot{\textsc{\@title}}
-\renewcommand{\headrulewidth}{0.4pt}
-\renewcommand{\footrulewidth}{0pt}
+% header and foot definition
+% \headwidth160mm \lhead[\thepage]{\rightmark}
+% \chead{} \rhead[\leftmark]{\thepage}
+% \cfoot{\textsc{\@title}}
+% \renewcommand{\headrulewidth}{0.4pt}
+% \renewcommand{\footrulewidth}{0pt}
 
 % Textspiegel
 \RequirePackage{typearea}
