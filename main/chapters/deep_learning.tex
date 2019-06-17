@@ -1,1 +1,34 @@
 \chapter{   Deep Learning}
+% CHAPTER SETTINGS
+\graphicspath{{./images/computer_vision/}}
+
+\section{Rgularization}
+
+\subsection{Why do we use regularization?}
+Regularization helps us control our model capacity, ensuring that our models are better at
+making (correct) classifications on data points that they were not trained on, which we call the
+ability to generalize. If we don’t apply regularization, our classifiers can easily become too complex
+and overfit to our training data, in which case we lose the ability to generalize to our testing data
+(and data points outside the testing set as well, such as new images in the wild).
+However, too much regularization can be a bad thing. We can run the risk of underfitting, in
+which case our model performs poorly on the training data and is not able to model the relationship
+between the input data and output class labels (because we limited model capacity too much). For
+example, consider the following plot of points, along with various functions that fit to these points.
+
+addfigure starterbundle p.114
+
+
+
+
+What we are doing here is looping over all entries in the matrix and taking the sum of squares.
+The sum of squares in the L2 regularization penalty discourages large weights in our matrixW,
+preferring smaller ones. Why might we want to discourage large weight values? In short, by
+penalizing large weights, we can improve the ability to generalize, and thereby reduce overfitting.
+Think of it this way – the larger a weight value is, the more influence it has on the output
+prediction. Dimensions with larger weight values can almost singlehandedly control the output
+prediction of the classifier (provided the weight value is large enough, of course) which will almost
+certainly lead to overfitting.
+
+
+
+\section{Activation Functions}

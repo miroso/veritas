@@ -82,6 +82,23 @@ How does sgd work - combine the code with from pyimagesearch with andrew NG. Why
 Describe cross entropy loss computattion (DL p92)
 What are the 4 main steps of classificstion (DL p82-83)
 What is the bias trick (DL p99)
+How do you update weights in momentum in comparison to SGD?
+How does momentum works?
+How do you stop the momentum so it does not overshoot?
+Why is the advantage of nesterow accelerations?
+What is the difference between L1 regularization, L2 regularization (commonly called “weight decay”), and Elastic Net? Equations with normal weight update? p. 115-117
+What are explicit (dropout) an implicit regularization techniques (data augmentation and early stopping)?
+Having a few points - how does a curve looks like when underfit, overfit, tuned?
+Explain cross-entropy?
+How can the loss over entire training set can be written?
+What are standard building blocks of a NN architecture?
+Draw a simple NN architecture (e.g. pp. 124) - what about the bias?
+How can you describe the output of a NN mathematically? p 124
+What types of activation functions do you know?
+What types of NN architectures do you know (e.g. feed-forward, recurrent, inception?, ...)?
+Explain this notation:3-2-3-2 feedforward network (p. 128)
+What is the Hebbs principle?
+
 
 
 ####################################################################################################
