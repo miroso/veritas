@@ -101,7 +101,7 @@ What is the Hebbs principle?
 Draw and, or, xor with states | add picture (p. 130)
 What is the architecture of a Perceptron network | Explain how it works (p. 130)
 What is the delta rule in perceptron learning
-How does backpropagation work (Andrew Ng - machien learning ^ https://mattmazur.com/2015/03/17/a-step-by-step-backpropagation-example/)
+How does backpropagation work | explain forward and backward pass (Andrew Ng - machien learning ^ https://mattmazur.com/2015/03/17/a-step-by-step-backpropagation-example/)
 
 
 
@@ -127,6 +127,7 @@ How would you fit a function using sin/cos? How would the fit look like, when tr
 What types of cross validations do we have?
 What is the difference between bagging and boosting
 How does adaboost work - boosting in general?
+How does partial derivation work | use examples
 
 
 ####################################################################################################
@@ -205,4 +206,4 @@ test suite
 
 
 spark
-what are databricks
+what is databricks
