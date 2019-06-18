@@ -98,6 +98,10 @@ What types of activation functions do you know?
 What types of NN architectures do you know (e.g. feed-forward, recurrent, inception?, ...)?
 Explain this notation:3-2-3-2 feedforward network (p. 128)
 What is the Hebbs principle?
+Draw and, or, xor with states | add picture (p. 130)
+What is the architecture of a Perceptron network | Explain how it works (p. 130)
+What is the delta rule in perceptron learning
+How does backpropagation work (Andrew Ng - machien learning ^ https://mattmazur.com/2015/03/17/a-step-by-step-backpropagation-example/)
 
 
 
