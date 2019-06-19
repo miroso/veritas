@@ -101,7 +101,11 @@ What is the Hebbs principle?
 Draw and, or, xor with states | add picture (p. 130)
 What is the architecture of a Perceptron network | Explain how it works (p. 130)
 What is the delta rule in perceptron learning
+Why do they take the derivate in backpropagation?
 How does backpropagation work | explain forward and backward pass (Andrew Ng - machien learning ^ https://mattmazur.com/2015/03/17/a-step-by-step-backpropagation-example/)
+
+
+
 
 
 
@@ -127,13 +131,14 @@ How would you fit a function using sin/cos? How would the fit look like, when tr
 What types of cross validations do we have?
 What is the difference between bagging and boosting
 How does adaboost work - boosting in general?
-How does partial derivation work | use examples
+extend bagging boosting with examples (e.g. random forrest)
+
 
 
 ####################################################################################################
 MATH
 ####################################################################################################
-
+How does partial derivation work | use examples
 
 
 ####################################################################################################
@@ -197,6 +202,10 @@ _____________________
 Vehicle Detection
 > car detection + classifier to detect if it is a car or a truck or something bigger. This info would be useful for subsequent triangulation, i.e. we need the size estimate of the car
 > create a website to the projects at one point?
+
+_____________________
+Smart mirrow with alexa
+> can you make your own alexa
 
 ####################################################################################################
 test suite
