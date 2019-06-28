@@ -93,7 +93,7 @@ Explain cross-entropy?
 How can the loss over entire training set can be written?
 What are standard building blocks of a NN architecture?
 Draw a simple NN architecture (e.g. pp. 124) - what about the bias?
-How can you describe the output of a NN mathematically? p 124
+How can you describe the output of a NN mathematically? (p. 124)
 What types of activation functions do you know?
 What types of NN architectures do you know (e.g. feed-forward, recurrent, inception?, ...)?
 Explain this notation:3-2-3-2 feedforward network (p. 128)
@@ -103,8 +103,17 @@ What is the architecture of a Perceptron network | Explain how it works (p. 130)
 What is the delta rule in perceptron learning
 Why do they take the derivate in backpropagation?
 How does backpropagation work | explain forward and backward pass (Andrew Ng - machien learning ^ https://mattmazur.com/2015/03/17/a-step-by-step-backpropagation-example/)
-
-
+What are the current eval metrics, e.g. recall, f1 score or others?
+What are the four ingredients of a neural neutwork? (p. 164)
+Whats the problem with constant initialization?
+What are the different types for weight initialization?
+What are fully-connected layers?
+Explain local invariance and compositionality regarding CNNs. (p. 169)
+What are image convolutions?
+What do they do?
+Why do we use them?
+How do we apply them to images?
+And what role do convolutions play in deep learning?
 
 
 
