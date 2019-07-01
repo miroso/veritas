@@ -47,14 +47,13 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \ProcessOptions
-%\RequirePackage[german]{babel}
-\RequirePackage{ae}
-\RequirePackage{amsmath}		% Zusätzliche Mathe-Symbole
-\RequirePackage{array}
+%\RequirePackage[german]{babel}  % country specific language package | country specific symbols and notations
+\RequirePackage{ae}              % virtual fonts for T1 encoded CMR-fonts
+\RequirePackage{amsmath}		 % additional math symbols
+\RequirePackage{array}           % package for creating matrices a.k.a. arrays
 \RequirePackage[authoryear,round]{natbib}	% allows the user to easily switch between Harvard or numeric citation
-\RequirePackage[breaklinks]{hyperref}
-\RequirePackage{natbib}
-%\RequirePackage{cite}
+\RequirePackage[breaklinks]{hyperref}  % long links will be divided on two or multiple lines
+%\RequirePackage{cite}  %  creates a literature reference
 \RequirePackage{color}
 \RequirePackage[english]{babel}
 \RequirePackage{enumerate}
@@ -154,6 +153,9 @@
 \def\signcity#1{\gdef\@signcity{#1}}
 \def\submitdate#1{\gdef\@submitdate{#1}}
 
+% \IfUsePrefixLine is not initialized correctly in the sectsty package and causes warnings.
+% This fix helps to solve the issue
+\renewcommand*{\chapterformat}{\thechapter\autodot\enskip}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % HIER ANPASSUGEN VORNEHMEN
