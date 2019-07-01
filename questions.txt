@@ -153,7 +153,9 @@ What types of cross validations do we have?
 What is the difference between bagging and boosting
 How does adaboost work - boosting in general?
 extend bagging boosting with examples (e.g. random forrest)
-
+how does hyperopt work?
+why is hyperopt better than other optimizing algos?
+What other optimizing stragegies do you know?
 
 
 ####################################################################################################
