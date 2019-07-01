@@ -109,11 +109,23 @@ Whats the problem with constant initialization?
 What are the different types for weight initialization?
 What are fully-connected layers?
 Explain local invariance and compositionality regarding CNNs. (p. 169)
-What are image convolutions?
+What are image convolutions? [In terms of deep learning, an (image) convolution is an element-wise multiplication of two matrices
+followed by a sum.]
 What do they do?
 Why do we use them?
 How do we apply them to images?
 And what role do convolutions play in deep learning?
+What is the difference between cross-correlation and convolution
+What is a kernel (p. 172)
+Why should the values of a kernel sum up to 0 [1?]?
+Checkout how the convolution really works in the script
+How is cv2.filter2D implemented in comparison to covolve.py?
+What is space invariance and local connectivity in CNNs?
+What is an activation map
+How is the number of channels changing across the CNN (p.182)
+How many weights per kernel do you have - how do you calculate it?
+What are the methods to reduce spatial input size in CNNs?
+
 
 
 
@@ -181,6 +193,7 @@ https://github.com/Thenerdstation/mltest
 
 Hwo do you deploy a python egg?
 
+
 ####################################################################################################
 TERMINAL
 ####################################################################################################
@@ -194,11 +207,10 @@ How do you use multiple windows in terminal
 ####################################################################################################
 PROJECTS
 ####################################################################################################
-Udacity reinforcement learning projects
-Udacity deep learning projects
-Udacity and Andrew NG NLP projects
-GANS
 
+_____________________
+art
+do some art with GANs
 
 _____________________
 Vehicle Detection
@@ -216,12 +228,5 @@ _____________________
 Smart mirrow with alexa
 > can you make your own alexa
 
-####################################################################################################
-test suite
-####################################################################################################
-// check dataset that there are equal number of
-
-
-
-spark
-what is databricks
+_____________________
+azure + 2 pis recrding something + 3 pi with temperature sensor or each of the two
