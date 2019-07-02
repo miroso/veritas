@@ -124,10 +124,31 @@ What is space invariance and local connectivity in CNNs?
 What is an activation map
 How is the number of channels changing across the CNN (p.182)
 How many weights per kernel do you have - how do you calculate it?
-What are the methods to reduce spatial input size in CNNs?
+What are the methods to reduce spatial input size in CNNs? [Stride + The primary function of the POOL layer is to progressively reduce the spatial size (i.e., width
+and height) of the input volume. Doing this allows us to reduce the amount of parameters and
+computation in the network – pooling also helps us control overfitting.] (p.189 )
+What is the padding equation? (p. 186)
+What is the difference between same and valid padding?
+How you calculate the size of a net after pooling (p. 187)
+Can pooling overlap?
+Pooling (p.188) [note: In their 2014 paper, Striving for Simplicity: The All Convolutional Net, Springenberg et al. [127]
+recommend discarding the POOL layer entirely and simply relying on CONV layers with a larger
+stride to handle downsampling the spatial dimensions of the volume.]
+What are fully-connected layers?
+Write down a simple architecture of a CNN (p. 188 bottom)
+What is batch normalization - how does it work and where do we apply it? [First introduced by Ioffe and Szegedy in their 2015 paper, Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift [128],]
+Where do you put batch normalization into your network? (p. 190)
+What is dropout? (p. 190)
+Have a look at the architectures (p. 192)
+Are CNNs Invariant to Translation, Rotation, and Scaling? (p. 194)
+What can you do aganst over and underfitting (coursera)
 
 
 
+
+######
+Network Architectures:
+GoogLeNet, SqueezeNet, ResNet, InceptionNet, ImageNet, MobileNet, ShallowNet
 
 
 ####################################################################################################
