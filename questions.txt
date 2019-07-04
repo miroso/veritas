@@ -142,13 +142,31 @@ What is dropout? (p. 190)
 Have a look at the architectures (p. 192)
 Are CNNs Invariant to Translation, Rotation, and Scaling? (p. 194)
 What can you do aganst over and underfitting (coursera)
-
+What are the characteristics of a vggnet
+[
+    The VGG family of Convolutional Neural Networks can be characterized by two key components:
+    1. All CONV layers in the network using only 33 filters.
+    2. Stacking multiple CONV => RELU layer sets (where the number of consecutive CONV =>
+RELU layers normally increases the deeper we go) before applying a POOL operation.
+]
+Why is it wise to use pooling layers deeper or not at all? What are the disatvantages of a pooling layer?
+[
+    In both ShallowNet and LeNet we have applied a series of CONV => RELU => POOL layers. However,
+in VGGNet, we stack multiple CONV => RELU layers prior to applying a single POOL layer.
+Doing this allows the network to learn more rich features from the CONV layers prior to downsampling
+the spatial input size via the POOL operation.
+]
 
 
 
 ######
 Network Architectures:
-GoogLeNet, SqueezeNet, ResNet, InceptionNet, ImageNet, MobileNet, ShallowNet
+GoogLeNet, SqueezeNet, ResNet, InceptionNet, ImageNet, MobileNet, ShallowNet, VGGnet, miniVGGNet (p. 230)
+
+#####
+papers:
+Simonyan and Zisserman’s work [100],
+Gradient-Based Learning Applied to Document Recognition [19]. LeNet
 
 
 ####################################################################################################
