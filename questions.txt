@@ -181,9 +181,16 @@ after each batch update
 ]
 What types of learning rate schedulers do we have? (p. 242)
 How would you calculate the weight decay? (p. 242)
-
-
-
+What Are Underfitting and Overfitting? {p.251-2}
+[
+    In this chapter we reviewed underfitting and overfitting. Underfitting occurs when your model
+is unable to obtain sufficiently low loss on the training set. Meanwhile, overfitting occurs when
+the gap between your training loss and validation loss is too large, indicating that the network is
+modeling the underlying patterns in the training data too strong.
+]
+How can you combat overfittign and underfitting
+Effect on learning rate on over and underfitting
+What if Validation Loss Is Lower than Training Loss?
 
 
 
