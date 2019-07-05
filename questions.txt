@@ -127,6 +127,12 @@ How many weights per kernel do you have - how do you calculate it?
 What are the methods to reduce spatial input size in CNNs? [Stride + The primary function of the POOL layer is to progressively reduce the spatial size (i.e., width
 and height) of the input volume. Doing this allows us to reduce the amount of parameters and
 computation in the network – pooling also helps us control overfitting.] (p.189 )
+[
+    This result is in contrast to when we set decay=0.01 / 40 (right) and obtain a much nicer
+learning plot (and not to mention, higher accuracy). By using learning rate decay we can often not
+only improve our classification accuracy but also lessen the effects of overfitting, thereby increasing
+the ability of our model to generalize
+]
 What is the padding equation? (p. 186)
 What is the difference between same and valid padding?
 How you calculate the size of a net after pooling (p. 187)
@@ -156,6 +162,29 @@ in VGGNet, we stack multiple CONV => RELU layers prior to applying a single POOL
 Doing this allows the network to learn more rich features from the CONV layers prior to downsampling
 the spatial input size via the POOL operation.
 ]
+What are the advantages of learning rate schedulers?
+[
+    Instead, what we can do is decrease our
+learning rate, thereby allowing our network to take smaller steps – this decreased rate enables
+our network to descend into areas of the loss landscape that are "more optimal" and would have
+otherwise been missed entirely by our larger learning rate.
+]
+What is weight scheduling and when is it applied?
+[
+    We can, therefore, view the process of learning rate scheduling as:
+1. Finding a set of reasonably “good” weights early in the training process with a higher learning
+rate.
+2. Tuning these weights later in the process to find more optimal weights using a smaller
+learning rate.
+
+after each batch update
+]
+What types of learning rate schedulers do we have? (p. 242)
+How would you calculate the weight decay? (p. 242)
+
+
+
+
 
 
 
