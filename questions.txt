@@ -191,6 +191,11 @@ modeling the underlying patterns in the training data too strong.
 How can you combat overfittign and underfitting
 Effect on learning rate on over and underfitting
 What if Validation Loss Is Lower than Training Loss?
+What packages would you use for visualizing neural networks_?
+[
+    graphviz and pydot
+]
+
 
 
 
