@@ -195,14 +195,16 @@ What packages would you use for visualizing neural networks_?
 [
     graphviz and pydot
 ]
-
+What is spatial pyramid pooling?
 
 
 
 
 ######
 Network Architectures:
-GoogLeNet, SqueezeNet, ResNet, InceptionNet, ImageNet, MobileNet, ShallowNet, VGGnet, miniVGGNet (p. 230)
+GoogLeNet, SqueezeNet, ResNet50, Inception V3, Xception, ImageNet, MobileNet, ShallowNet, VGG16, VGG19, miniVGGNet (p. 230 | 278)
+
+
 
 #####
 papers:
