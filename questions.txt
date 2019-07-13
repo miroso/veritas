@@ -196,7 +196,7 @@ What packages would you use for visualizing neural networks_?
     graphviz and pydot
 ]
 What is spatial pyramid pooling?
-
+What is otsu's thresholding technique?
 
 
 
