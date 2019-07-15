@@ -204,7 +204,7 @@ location and scale. Perhaps most intriguing (and relevant to our application), t
 in real-time on modern hardware. In fact, the motivation of behind Viola and Jones’ work was to
 create a face detector.
 ]
-What is the difference between harr cascade and hog?
+What is the difference between haar cascade and hog?
 
 
 ######
