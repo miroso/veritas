@@ -197,7 +197,14 @@ What packages would you use for visualizing neural networks_?
 ]
 What is spatial pyramid pooling?
 What is otsu's thresholding technique?
-
+Explain the haar cascade algorithm
+[
+    The Haar cascade algorithm is capable of detecting objects in images, regardless of their
+location and scale. Perhaps most intriguing (and relevant to our application), the detector can run
+in real-time on modern hardware. In fact, the motivation of behind Viola and Jones’ work was to
+create a face detector.
+]
+What is the difference between harr cascade and hog?
 
 
 ######
