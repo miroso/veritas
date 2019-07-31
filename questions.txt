@@ -205,6 +205,28 @@ in real-time on modern hardware. In fact, the motivation of behind Viola and Jon
 create a face detector.
 ]
 What is the difference between haar cascade and hog?
+What is data augmentation {PB: 15}
+What types of image augmentation do you know?
+Why do you use aumentation?
+{
+    However, as we’ll find out later in this chapter, data augmentation can help dramatically reduce
+overfitting, all the while ensuring that our model generalizes better to new input samples. Furthermore,
+when working with datasets where we have too few examples to apply deep learning, we
+can utilize data augmentation to generate additional training data, thereby reducing the amount of
+hand-labeled data required to train a deep learning network.
+}
+What types of transfer learning do you know?
+{
+    In general, there are two types of transfer learning when applied to deep learning for computer
+vision:
+1. Treating networks as arbitrary feature extractors. [add picture PB p.35] -> What is a feature extractor
+2. Removing the fully-connected layers of an existing network, placing new FC layer set on
+top of the CNN, and fine-tuning these weights (and optionally previous layers) to recognize
+object classes.
+}
+What is HDF5 and how is the data stored there? {PB p. 35}
+
+
 
 
 ######
