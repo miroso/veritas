@@ -225,6 +225,29 @@ top of the CNN, and fine-tuning these weights (and optionally previous layers) t
 object classes.
 }
 What is HDF5 and how is the data stored there? {PB p. 35}
+What is rank-1, rank-5, and rank-N accuracy? And how do they differ from the traditional
+accuracy (i.e., precision)?
+{
+    Rank-1 accuracy is, therefore, the percentage of
+predictions where the top prediction matches the ground-truth label – this is the “standard” type of
+accuracy we are used to computing: take the total number of correct predictions and divide it by
+the number of data points in the dataset.
+1. Step #1: Computing the class label probabilities for each input image in the dataset.
+2. Step #2: Determining if the ground-truth label is equal to the predicted class label with the
+largest probability.
+3. Step #3: Tallying the number of times where Step #2 is true.
+
+We can then extend this concept to rank-5 accuracy. Instead of caring only about the number
+one prediction, we care about the top-5 predictions. Our evaluation process now becomes:
+1. Step #1: Compute the class label probabilities for each input image in the dataset.
+2. Step #2: Sort the predicted class label probabilities in descending order, such that labels
+with higher probability are placed at the front of the list.
+3. Step #3: Determine if the ground-truth label exists in the top-5 predicted labels from Step
+#2.
+4. Step #4: Tally the number of times where Step #3 is true.
+Rank-5 is simply an extension to rank-1 accuracy: instead of caring about only the #1 prediction
+from the classifier, we’ll take into account the top-5 predictions from the network.
+}
 
 
 
