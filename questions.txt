@@ -249,6 +249,68 @@ Rank-5 is simply an extension to rank-1 accuracy: instead of caring about only t
 from the classifier, we’ll take into account the top-5 predictions from the network.
 }
 
+{
+    infos to network surgery. PB 68. First, freeze basemodel and train the head for 30-40 epochs. Then unfreeze the last conv layer. If classification accuracy continues to
+improve (without overfitting), you may want to consider unfreezing more layers in the body.
+At this point we should have a warm start to training, so we’ll switch over to SGD (again with
+a small learning rate) and continue training. Train for about 100 epochs.
+}
+what is Jensen’s Inequality?
+what is the difference between voting and averaging in decision trees?
+{
+    Dietterich’s work hinges on Jensen’s Inequality, which is known as the “diversity” or the
+“ambiguity decomposition” in machine learning literature. The formal definition of Jensen’s
+Inequality states that the convex combined (average) ensemble will have error less than or equal to
+the average error of the individual models. It may be that one individual model has a lower error
+than the average of all models, but since there is no criterion that we can use to “select” this model,
+we can be assured that the average of all models will perform no worse than selecting any single
+model at random. In short, we can only get better by averaging our predictions together; we don’t
+have to fear making our classifier worse.
+}
+How many models do you train in ensemble learning for image recognition or classification?
+{
+    we normally only see 5-10
+Convolutional Neural Networks in an ensemble – the reason is due to the fact that CNNs are much
+more time-consuming and computationally expensive to train
+}
+Somthing about ensembles?
+{
+    It’s important to note that we would never jump straight to training an ensemble – we would
+first run a series of experiments to determine which combination of architecture, optimizer, and
+hyperparameters yields the highest accuracy on a given dataset.
+Once you’ve reached this optimal set of combination, we would then switch over to training
+multiple models to form an ensemble. Training an ensemble as your very first experiment is considered
+premature optimization as you don’t know what combination of architecture, optimizer, and
+hyperparameters will work best for your given dataset.
+}
+Check: Train 1, get M for free paper
+
+Optimization algos:
+{
+    Adagrad?
+    Adadelta?
+    RMSProp?
+    Adam?
+    Nadam?
+
+    * add names and papers to them
+    * check Karpathy’s excellent optimization method notes [26]
+}
+Why have all state-of-the-art architectures been trained with SGD and not with ADAM?
+{
+    But why is this? We can clearly see the benefits in algorithms that apply adaptive learning rates
+such as RMSprop and Adam – networks can converge faster. However, the speed of convergence,
+while important, is not the most important factor – hyperparameters still win out. If you cannot
+tune the hyperparameters to a given optimizer (and associated model), your network will never
+obtain reasonable accuracy.
+}
+How many data samples per class should we usually have?
+{
+    1000 - 5000
+}
+According to Andrew Ng, what is the recipy of training p. 93 PB
+Notes to transfer learning in PB S. 96
+Why is loading images in batches ineffvicient and what is the alternative?
 
 
 
