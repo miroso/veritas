@@ -311,6 +311,34 @@ How many data samples per class should we usually have?
 According to Andrew Ng, what is the recipy of training p. 93 PB
 Notes to transfer learning in PB S. 96
 Why is loading images in batches ineffvicient and what is the alternative?
+What means the option "stratify" in train_test_split?
+HDF5 infos:
+{
+    For example, if we defined a dataset generator that loaded images sequentially from disk, we
+would need N read operations, one for each image. However, by placing our dataset of images
+into an HDF5 dataset, we can instead load batches of images using a single read. This action
+dramatically reduces the number of I/O calls and allows us to work with very large image datasets.
+}
+What was the problem with AlexNet in Chapter 9 of SB?
+How can GoogLenet go so deep without getting lost in the parameters?
+What is special about GoogLeNet?
+{
+First, the model architecture is tiny compared to AlexNet and VGGNet ( 28MB for the weights
+themselves). The authors are able to obtain such a dramatic drop in network architecture size (while
+still increasing the depth of the overall network) by removing fully-connected layers and instead
+using global average pooling. Most of the weights in a CNN can be found in the dense FC layers –
+if these layers can be removed, the memory savings are massive.
+Secondly, the Szegedy et al. paper makes usage of a network in network or micro-architecture
+when constructing the overall macro-architecture. Up to this point, we have seen only sequential
+neural networks where the output of one network feeds directly into the next. We are now going
+to see micro-architectures, small building blocks that are used inside the rest of the architecture,
+where the output from one layer can split into a number of various paths and be rejoined later.
+Specifically, Szegedy et al. contributed the Inception module to the deep learning community, a
+building block that fits into a Convolutional Neural Network enabling it to learn CONV layers with
+multiple filter sizes, turning the module into a multi-level feature extractor.
+}
+What is the inception module?
+How do 1 x 1 convolutions work and learn local features?
 
 
 
@@ -324,7 +352,8 @@ GoogLeNet, SqueezeNet, ResNet50, Inception V3, Xception, ImageNet, MobileNet, Sh
 papers:
 Simonyan and Zisserman’s work [100],
 Gradient-Based Learning Applied to Document Recognition [19]. LeNet
-
+Zhang et al.’s 2017
+publication, Understanding Deep Learning Requires Re-Thinking Generalization [42].
 
 ####################################################################################################
 INFORMATICS
