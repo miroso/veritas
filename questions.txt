@@ -339,6 +339,9 @@ multiple filter sizes, turning the module into a multi-level feature extractor.
 }
 What is the inception module?
 How do 1 x 1 convolutions work and learn local features?
+What is functional API regarding kears models?
+What is the difference between sequential and non-sequential models in keras?
+
 
 
 
