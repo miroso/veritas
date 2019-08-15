@@ -342,7 +342,7 @@ How do 1 x 1 convolutions work and learn local features?
 What is functional API regarding kears models?
 What is the difference between sequential and non-sequential models in keras?
 MiniGoogLeNet - how do you get the filters corectly?
-Describe the ResNet residual modules
+Describe the ResNet residual modules (3 types)
 What is the concept: "identity mappings" used in ResNet? {174 PB}
 What is the so-called pre-activation module in ResNet?
 
