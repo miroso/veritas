@@ -341,7 +341,10 @@ What is the inception module?
 How do 1 x 1 convolutions work and learn local features?
 What is functional API regarding kears models?
 What is the difference between sequential and non-sequential models in keras?
-
+MiniGoogLeNet - how do you get the filters corectly?
+Describe the ResNet residual modules
+What is the concept: "identity mappings" used in ResNet? {174 PB}
+What is the so-called pre-activation module in ResNet?
 
 
 
@@ -357,6 +360,8 @@ Simonyan and Zisserman’s work [100],
 Gradient-Based Learning Applied to Document Recognition [19]. LeNet
 Zhang et al.’s 2017
 publication, Understanding Deep Learning Requires Re-Thinking Generalization [42].
+Springenberg et al. [41] from PB
+Identity Mappings in Deep Residual Networks [33]
 
 ####################################################################################################
 INFORMATICS
