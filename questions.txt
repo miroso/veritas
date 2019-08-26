@@ -345,6 +345,15 @@ MiniGoogLeNet - how do you get the filters corectly?
 Describe the ResNet residual modules (3 types)
 What is the concept: "identity mappings" used in ResNet? {174 PB}
 What is the so-called pre-activation module in ResNet?
+What is haar cascade
+describe hog
+What are the key steps of the object detection pipeline (PB: S. 209)
+What is deep dream?
+How do you generate deep dream?
+What is an octave in deep dream?
+Explain L-BFGS funtion for loss minimization?
+What are GANs?
+What is the 6 step process to train a GAN? P. 246 PB
 
 
 
