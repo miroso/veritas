@@ -359,7 +359,7 @@ What is a transposed convolution and what other conv types do you know?
     https://towardsdatascience.com/types-of-convolutions-in-deep-learning-717013397f4d
 }
 
-How does a super resolution algo work?
+How does a super resolution algo work? Why no loss? What about training for the best correlation value?
 
 
 
