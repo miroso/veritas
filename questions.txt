@@ -342,7 +342,7 @@ How do 1 x 1 convolutions work and learn local features?
 What is functional API regarding kears models?
 What is the difference between sequential and non-sequential models in keras?
 MiniGoogLeNet - how do you get the filters corectly?
-Describe the ResNet residual modules (3 types)
+Describe the ResNet residual modules (3 types)  (IB 104 in addition)
 What is the concept: "identity mappings" used in ResNet? {174 PB}
 What is the so-called pre-activation module in ResNet?
 What is haar cascade
@@ -360,9 +360,20 @@ What is a transposed convolution and what other conv types do you know?
 }
 
 How does a super resolution algo work? Why no loss? What about training for the best correlation value?
-
-
-
+Why (from historical reasons) do you double the number of filters after max pooling is applied?
+{
+The reason we perform this doubling of filters is to ensure no single layer block is more biased
+than the others. Layers earlier in the network architecture have fewer filters, but their spatial
+volumes are also much larger, implying there is “more (spatial) data” to learn from.
+However, we know that applying a max pooling operation will reduce our spatial input volumes.
+we reduce the spatial volumes without increasing the number of filters, then our layers become
+unbalanced and potentially biased, implying that layers earlier in the network may influence our
+output classification more than layers deeper in the network. To combat this imbalance, we keep in
+mind the ratio of volume size to number of filters. If we reduce the input volume size by 50-75%,
+then we double the number of filters in the next set of CONV layers to maintain the balance.
+}
+What is the purpose behing training a smaller version  of your NN to obrain the weights? (INB 75)
+What is a const function and an optimizer?
 
 
 ######
