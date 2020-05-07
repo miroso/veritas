@@ -374,6 +374,12 @@ then we double the number of filters in the next set of CONV layers to maintain 
 }
 What is the purpose behing training a smaller version  of your NN to obrain the weights? (INB 75)
 What is a const function and an optimizer?
+How does the fire module in SqueezeNet works? What can you say about SqueezeNet?
+How does a CNN learn?
+Describe a fire module in SqueezeNet (p120).
+
+*#* Wie werden Neurone in einem CNN angeordnet. WAs ist der Unterschied zu einem multilayer perceptron
+
 
 
 ######
